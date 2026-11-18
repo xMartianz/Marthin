@@ -822,6 +822,20 @@ section {
   background: var(--gradient);
   color: #fff;
 }
+.project-badge.wip {
+  left: auto;
+  right: 12px;
+  background: #f59e0b;
+  color: #1f1300;
+}
+.wip-note {
+  padding: 14px 18px;
+  margin-bottom: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.1);
+  font-size: 0.95rem;
+}
 .project-body {
   padding: 22px;
   display: flex;

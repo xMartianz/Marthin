@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <nav class="breadcrumb reveal" aria-label="Breadcrumb">
           <a href="index.html">Home</a><span>/</span><a href="index.html#projects">Projects</a><span>/</span><span aria-current="page">${esc(p.title)}</span>
         </nav>
-        <span class="eyebrow reveal">${esc(p.category)}${p.featured ? " · Featured" : ""}</span>
+        <span class="eyebrow reveal">${esc(p.category)}${p.featured ? " · Featured" : ""}${p.status === "in-progress" ? " · Sedang Dikerjakan" : ""}</span>
         <h1 class="reveal" style="--delay:.05s">${esc(p.title)}</h1>
         <p class="lead reveal" style="--delay:.1s">${esc(p.summary)}</p>
         <div class="detail-meta reveal" style="--delay:.15s">
@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
                   </div>
                   <div id="detailViewer"></div>
                 </div>`
+              : ""
+          }
+          ${
+            p.status === "in-progress"
+              ? `<div class="wip-note reveal">⏳ Project ini masih dalam pengerjaan. Detail, hasil, dan source code akan diperbarui setelah selesai.</div>`
               : ""
           }
           ${p.problem ? `<div class="detail-section reveal"><h2>Latar Belakang Masalah</h2><p>${esc(p.problem)}</p></div>` : ""}

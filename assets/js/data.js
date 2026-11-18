@@ -23,7 +23,7 @@ const PORTFOLIO = {
     stats: [
       { value: 3, suffix: "", label: "Pengalaman Profesional" },
       { value: 7, suffix: "", label: "Sertifikasi" },
-      { value: 4, suffix: "", label: "Project Data" },
+      { value: 2, suffix: "", label: "Project Selesai" },
     ],
   },
 
@@ -83,6 +83,7 @@ const PORTFOLIO = {
      - demo:     link live demo (kosongkan "" untuk menyembunyikan tombol)
      - repo:     link repository GitHub (kosongkan "" untuk menyembunyikan)
      - powerbi:  URL "Publish to web" Power BI (iframe). Kosongkan jika tidak ada.
+     - status:   "in-progress" untuk menandai project yang sedang dikerjakan
      - gallery:  daftar screenshot { src, caption }. Project Power BI yang punya
                  gallery/powerbi akan tampil di "Dashboard Showcase" beranda. */
   projects: [
@@ -124,10 +125,10 @@ const PORTFOLIO = {
         "Aplikasi Streamlit untuk mensimulasikan rentang biaya medis menggunakan tiga model regresi kuantil — menampilkan estimasi median beserta rentang ketidakpastiannya.",
       cover: "assets/img/projects/medical-cost.svg",
       tags: ["Python", "Scikit-learn", "Quantile Regression", "Streamlit"],
-      demo: "", // isi dengan link Streamlit Cloud jika sudah di-deploy
+      demo: "https://medical-cost-estimator-group-5.streamlit.app/",
       repo: "https://github.com/xMartianz/medical-cost-estimator",
       powerbi: "",
-      role: "Personal project",
+      role: "",
       duration: "",
       problem:
         "Estimasi biaya medis berupa satu angka sering menyesatkan karena biaya sangat bervariasi. Pengguna perlu melihat rentang kemungkinan biaya, bukan hanya satu prediksi.",
@@ -151,7 +152,8 @@ const PORTFOLIO = {
       id: "customer-churn-prediction",
       title: "Customer Churn Prediction",
       category: "Python",
-      featured: true,
+      featured: false,
+      status: "in-progress",
       year: 2025,
       summary:
         "Workflow machine learning untuk menganalisis dan memprediksi churn pelanggan — dari preprocessing, eksplorasi data, hingga training dan evaluasi model.",
@@ -180,6 +182,7 @@ const PORTFOLIO = {
       title: "House Price Prediction",
       category: "Python",
       featured: false,
+      status: "in-progress",
       year: 2025,
       summary:
         "Membangun dan membandingkan model regresi — Lasso, Random Forest, dan LightGBM — untuk memprediksi harga rumah.",

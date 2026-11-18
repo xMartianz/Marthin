@@ -125,6 +125,7 @@ function projectCard(p, i) {
         <img src="${esc(p.cover)}" alt="Screenshot ${esc(p.title)}" loading="lazy">
         <span class="project-badge">${esc(p.category)}</span>
         ${p.featured ? '<span class="project-badge featured">★ Featured</span>' : ""}
+        ${p.status === "in-progress" ? '<span class="project-badge wip">⏳ Sedang Dikerjakan</span>' : ""}
       </a>
       <div class="project-body">
         <h3>${esc(p.title)}</h3>
@@ -150,7 +151,8 @@ function projectCard(p, i) {
 function renderProjects() {
   const grid = $("#projectsGrid");
   // Featured ditampilkan lebih dulu
-  const list = [...P.projects].sort((a, b) => (b.featured === true) - (a.featured === true));
+  const rank = (p) => (p.featured ? 0 : p.status === "in-progress" ? 2 : 1);
+  const list = [...P.projects].sort((a, b) => rank(a) - rank(b));
   grid.innerHTML = list.map(projectCard).join("");
 
   const cats = ["Semua", "Featured", ...new Set(P.projects.map((p) => p.category))];
