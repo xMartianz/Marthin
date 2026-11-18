@@ -683,6 +683,35 @@ section {
   border-radius: inherit;
   transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
+.skill-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.skill-list:empty {
+  display: none;
+}
+.skill-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+.skill-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient);
+  flex-shrink: 0;
+}
+.hero-photo img {
+  object-position: center top;
+}
 .tools-strip {
   margin-top: 40px;
   display: flex;

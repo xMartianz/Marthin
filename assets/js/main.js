@@ -96,6 +96,7 @@ function renderSkills() {
           <h3>${esc(cat.category)}</h3>
         </div>
         ${cat.items
+          .filter((s) => typeof s === "object" && s.level != null)
           .map(
             (s) => `
           <div class="skill-item">
@@ -104,6 +105,10 @@ function renderSkills() {
           </div>`
           )
           .join("")}
+        <ul class="skill-list">${cat.items
+          .filter((s) => typeof s === "string" || s.level == null)
+          .map((s) => `<li>${esc(typeof s === "string" ? s : s.name)}</li>`)
+          .join("")}</ul>
       </div>`
     )
     .join("");

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" font-family="Segoe UI,Arial,sans-serif">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+<pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".07"/></pattern></defs>
+<rect width="1280" height="800" fill="url(#g)"/><rect width="1280" height="800" fill="url(#p)"/>
+<circle cx="1180" cy="80" r="220" fill="#fff" opacity=".06"/>
+<path d="M960,250 A170,170 0 0 1 1002,585" fill="none" stroke="#fff" stroke-width="64" opacity="0.9"/><path d="M1002,585 A170,170 0 0 1 790,409" fill="none" stroke="#fff" stroke-width="64" opacity="0.55"/><path d="M790,409 A170,170 0 0 1 960,250" fill="none" stroke="#fff" stroke-width="64" opacity="0.3"/>
+<text x="80" y="190" font-size="22" font-weight="700" fill="#fff" opacity=".8" letter-spacing="4">PYTHON · MACHINE LEARNING</text>
+<text x="80" y="300" font-size="66" font-weight="800" fill="#fff" letter-spacing="-1.5">Customer Churn</text><text x="80" y="376" font-size="66" font-weight="800" fill="#fff" letter-spacing="-1.5">Prediction</text><rect x="80" y="600" width="114" height="44" rx="22" fill="#fff" opacity=".18"/><text x="98" y="629" font-size="20" font-weight="600" fill="#fff">Python</text><rect x="206" y="600" width="192" height="44" rx="22" fill="#fff" opacity=".18"/><text x="224" y="629" font-size="20" font-weight="600" fill="#fff">Scikit-learn</text></svg>

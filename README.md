@@ -33,16 +33,16 @@ Website portofolio statis (HTML + CSS + JavaScript murni, tanpa framework & tanp
     ├── js/main.js          # Render section halaman utama
     ├── js/project.js       # Render halaman detail project
     ├── img/                # Foto profil, favicon, screenshot project
-    └── cv/CV-Marthin.pdf   # File CV (ganti dengan milik Anda)
+    └── cv/CV_Marthin_Daniel_Theo_Gratia.pdf   # File CV (ganti dengan milik Anda)
 ```
 
 ## Cara Mengubah Konten
 
-Semua konten ada di **`assets/js/data.js`**. Isi saat ini masih **contoh/dummy**; ganti dengan data Anda.
+Semua konten ada di **`assets/js/data.js`**. Isinya sudah diisi dengan data asli dari CV.
 
 1. **Profil**: ubah `profile.name`, `role`, `headline`, `typedRoles`, `stats`, `email`, `location`.
 2. **Foto**: simpan foto Anda di `assets/img/` (mis. `profile.jpg`, rasio 4:5 disarankan) lalu ubah `profile.photo`.
-3. **CV**: ganti `assets/cv/CV-Marthin.pdf` dengan CV Anda (atau ubah `profile.cv`).
+3. **CV**: ganti `assets/cv/CV_Marthin_Daniel_Theo_Gratia.pdf` dengan CV Anda (atau ubah `profile.cv`).
 4. **GitHub & LinkedIn**: isi `social.github` (username saja) dan `social.linkedin` (URL lengkap).
 5. **Project**: tambah/edit objek di `projects`. Setiap project otomatis punya halaman detail di `project.html?id=<id>`.
    - `demo`: link live demo (kosongkan `""` untuk menyembunyikan tombol).
