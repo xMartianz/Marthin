@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Project — Marthin</title>
+    <meta name="description" content="Detail project portofolio: masalah, solusi, fitur, hasil, dan galeri dashboard." />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var t;
+        try { t = localStorage.getItem("portfolio-theme"); } catch (e) {}
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">Marthin<span>.</span></a>
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects" class="active">Projects</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#certifications">Certifications</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm btn-cv btn-cv-nav" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            CV
+          </a>
+          <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          </button>
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="scroll-progress"></div>
+    </header>
+
+    <main id="projectRoot"></main>
+
+    <footer class="footer">
+      <div class="container">
+        <p style="margin: 0">© <span id="year"></span> <span id="footerName"></span>. Dibuat dengan ❤️ dan data.</p>
+        <div class="footer-links" id="footerSocial"></div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Kembali ke atas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/project.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marthin — Data Analyst Portfolio</title>
+    <meta
+      name="description"
+      content="Portofolio Marthin — Data Analyst & Business Intelligence Developer. Dashboard Power BI, analisis data, SQL, dan Python."
+    />
+    <meta property="og:title" content="Marthin — Data Analyst Portfolio" />
+    <meta property="og:description" content="Dashboard Power BI, analisis data, SQL, dan Python." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <!-- Terapkan tema sebelum halaman dirender (mencegah kedipan) -->
+    <script>
+      (function () {
+        var t;
+        try { t = localStorage.getItem("portfolio-theme"); } catch (e) {}
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#about">Lewati ke konten</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="container">
+        <a href="#home" class="logo">Marthin<span>.</span></a>
+        <nav aria-label="Navigasi utama">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm btn-cv btn-cv-nav" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            CV
+          </a>
+          <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Ganti tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          </button>
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="scroll-progress"></div>
+    </header>
+
+    <main>
+      <!-- ================= 1. HOME ================= -->
+      <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="grid-pattern"></div>
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="badge-available reveal"><span class="dot"></span> Open to work</span>
+            <p class="hero-greet reveal" style="--delay: 0.05s">Halo, saya</p>
+            <h1 class="hero-name reveal" style="--delay: 0.1s"><span id="heroName" class="gradient-text">Marthin</span></h1>
+            <p class="hero-role reveal" style="--delay: 0.15s"><span id="typed"></span><span class="typed-cursor" aria-hidden="true"></span></p>
+            <p class="hero-headline reveal" style="--delay: 0.2s" id="heroHeadline"></p>
+            <div class="hero-cta reveal" style="--delay: 0.25s">
+              <a class="btn btn-primary btn-cv" href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                Download CV
+              </a>
+              <a class="btn btn-outline" href="#projects">Lihat Project</a>
+            </div>
+            <div class="hero-social reveal" style="--delay: 0.3s" id="heroSocial"></div>
+            <div class="hero-stats" id="heroStats"></div>
+          </div>
+
+          <div class="hero-photo-wrap reveal reveal-zoom" style="--delay: 0.15s">
+            <div class="hero-photo"><img id="heroPhoto" src="" alt="" width="400" height="500" /></div>
+            <div class="floating-chip chip-1"><span class="chip-icon">📊</span> Power BI</div>
+            <div class="floating-chip chip-2"><span class="chip-icon">🧠</span> Data-driven</div>
+          </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Gulir ke bawah"></a>
+      </section>
+
+      <!-- ================= 2. ABOUT ME ================= -->
+      <section id="about" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">About Me</span>
+            <h2 class="section-title">Latar Belakang & <span class="gradient-text">Perjalanan Karier</span></h2>
+          </div>
+          <div class="about-grid">
+            <div class="reveal reveal-left">
+              <div class="about-text" id="aboutText"></div>
+              <div class="about-actions">
+                <a class="btn btn-primary btn-cv" href="#">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                  Download CV
+                </a>
+                <a class="btn btn-outline" href="#contact">Hubungi Saya</a>
+              </div>
+            </div>
+            <div class="highlight-grid" id="aboutHighlights"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. TECHNICAL SKILLS ================= -->
+      <section id="skills">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Technical Skills</span>
+            <h2 class="section-title">Keahlian <span class="gradient-text">Teknis</span></h2>
+            <p class="section-sub">Tools dan teknologi yang saya gunakan untuk mengolah, menganalisis, dan memvisualisasikan data.</p>
+          </div>
+          <div class="skills-grid" id="skillsGrid"></div>
+          <div class="tools-strip" id="toolsStrip"></div>
+        </div>
+      </section>
+
+      <!-- ================= 4. FEATURED PROJECTS ================= -->
+      <section id="projects" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Featured Projects</span>
+            <h2 class="section-title">Project <span class="gradient-text">Pilihan</span></h2>
+            <p class="section-sub">Klik project untuk melihat detail lengkap: masalah, solusi, fitur, hasil, dan galeri dashboard.</p>
+          </div>
+          <div class="filter-bar reveal" id="filterBar" role="group" aria-label="Filter project"></div>
+          <div class="projects-grid" id="projectsGrid"></div>
+
+          <!-- Dashboard Showcase: Power BI embed / screenshot interaktif -->
+          <div class="card showcase reveal" id="showcase">
+            <div class="showcase-head">
+              <div>
+                <span class="eyebrow">Dashboard Showcase</span>
+                <h3>Jelajahi Dashboard Power BI</h3>
+                <p>Pilih dashboard, geser antar halaman, dan klik gambar untuk memperbesar.</p>
+              </div>
+              <div class="tabs" id="showcaseTabs" role="tablist"></div>
+            </div>
+            <div id="showcaseViewer"></div>
+            <div style="text-align: right; margin-top: 14px">
+              <a class="btn btn-ghost btn-sm" id="showcaseLink" href="#">Lihat studi kasus lengkap →</a>
+            </div>
+          </div>
+
+          <!-- Integrasi GitHub -->
+          <div class="gh-block" id="ghBlock">
+            <div class="gh-head reveal">
+              <h3>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                Repository Terbaru di GitHub
+              </h3>
+              <a class="btn btn-outline btn-sm" id="ghProfile" href="#" target="_blank" rel="noopener">Lihat profil GitHub ↗</a>
+            </div>
+            <div class="gh-grid" id="ghGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 5. EXPERIENCE ================= -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Experience</span>
+            <h2 class="section-title">Timeline <span class="gradient-text">Pengalaman</span></h2>
+            <p class="section-sub">Perjalanan karier dan pendidikan saya dari waktu ke waktu.</p>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <!-- ================= 6. CERTIFICATIONS ================= -->
+      <section id="certifications" class="section-alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Certifications</span>
+            <h2 class="section-title">Sertifikasi & <span class="gradient-text">Lisensi</span></h2>
+          </div>
+          <div class="cert-grid" id="certGrid"></div>
+        </div>
+      </section>
+
+      <!-- ================= 7. CONTACT ================= -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Mari <span class="gradient-text">Terhubung</span></h2>
+            <p class="section-sub">Terbuka untuk peluang kerja, kolaborasi project, atau sekadar diskusi tentang data.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="card contact-info reveal reveal-left">
+              <h3>Info Kontak</h3>
+              <p>Respons biasanya dalam 1×24 jam.</p>
+              <ul class="contact-list" id="contactList"></ul>
+              <div class="contact-social" id="contactSocial"></div>
+            </div>
+            <form class="card contact-form reveal reveal-right" id="contactForm">
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Nama</label>
+                  <input id="name" name="name" type="text" required autocomplete="name" placeholder="Nama Anda" />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" placeholder="nama@email.com" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="subject">Subjek</label>
+                <input id="subject" name="subject" type="text" placeholder="Tawaran kerja / kolaborasi" />
+              </div>
+              <div class="field">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required placeholder="Tulis pesan Anda..."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+              <p class="form-note">Tombol ini akan membuka aplikasi email Anda dengan pesan yang sudah terisi.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p style="margin: 0">© <span id="year"></span> <span id="footerName"></span>. Dibuat dengan ❤️ dan data.</p>
+        <div class="footer-links" id="footerSocial"></div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Kembali ke atas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
