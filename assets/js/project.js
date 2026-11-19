@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hasGallery || p.powerbi
               ? `<div class="detail-section reveal">
                   <div class="showcase-head" style="margin-bottom:16px">
-                    <h2 style="margin:0">${p.powerbi ? "Dashboard Interaktif" : "Galeri Dashboard"}</h2>
+                    <h2 style="margin:0">${p.powerbi ? "Dashboard Interaktif" : p.category === "Power BI" ? "Galeri Dashboard" : "Galeri Project"}</h2>
                     ${
                       p.powerbi && hasGallery
                         ? `<div class="tabs" role="tablist" id="modeTabs">
