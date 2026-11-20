@@ -23,7 +23,7 @@ const PORTFOLIO = {
     stats: [
       { value: 3, suffix: "", label: "Pengalaman Profesional" },
       { value: 7, suffix: "", label: "Sertifikasi" },
-      { value: 3, suffix: "", label: "Project Selesai" },
+      { value: 4, suffix: "", label: "Project Selesai" },
     ],
   },
 
@@ -76,7 +76,7 @@ const PORTFOLIO = {
       ],
     },
   ],
-  tools: ["Power BI", "Excel", "Google Sheets", "SQL", "Python", "Pandas", "Scikit-learn", "LightGBM", "Streamlit", "Git & GitHub"],
+  tools: ["Power BI", "Excel", "Google Sheets", "SQL", "Python", "Pandas", "Scikit-learn", "LightGBM", "Streamlit", "JavaScript", "Supabase", "Git & GitHub"],
 
   /* ---------- Projects ----------
      Setiap project otomatis punya halaman detail: project.html?id=<id>
@@ -87,6 +87,48 @@ const PORTFOLIO = {
      - gallery:  daftar screenshot { src, caption }. Project Power BI yang punya
                  gallery/powerbi akan tampil di "Dashboard Showcase" beranda. */
   projects: [
+    {
+      id: "teamsync",
+      title: "TeamSync — Sistem Pembagian Beban Kerja Tim",
+      category: "Web App",
+      featured: true,
+      year: 2026,
+      summary:
+        "Sistem informasi pembagian beban kerja tim yang adil dan transparan — dashboard kapasitas real-time, auto-assign PIC & backup, indeks keadilan beban, dan simulator skenario what-if.",
+      cover: "assets/img/projects/teamsync.svg",
+      tags: ["JavaScript", "Supabase", "PostgreSQL", "Realtime", "Workload Analytics"],
+      demo: "https://xmartianz.github.io/team-sync-framework-website/",
+      repo: "https://github.com/xMartianz/team-sync-framework-website",
+      powerbi: "",
+      role: "",
+      duration: "",
+      problem:
+        "Pembagian tugas di tim sering tidak merata: sebagian anggota overload sementara yang lain longgar, keputusan siapa mengerjakan apa tidak transparan, dan tugas mudah terbengkalai saat PIC cuti atau sakit.",
+      solution:
+        "Membangun aplikasi web (HTML + JavaScript tanpa build) dengan backend Supabase (Postgres, Auth, Realtime). Setiap tugas diberi bobot dari kompleksitas, urgensi, dan estimasi jam, lalu dibandingkan dengan kapasitas tiap anggota. Sistem merekomendasikan PIC & backup berdasarkan sisa kapasitas dan skill, mengukur keadilan beban dengan Indeks Jain dan koefisien Gini, serta memicu eskalasi & handover otomatis. Semua hak akses ditegakkan di database lewat Row Level Security.",
+      features: [
+        "Dashboard kapasitas real-time dengan indikator hijau / kuning / merah per anggota",
+        "Kalkulator bobot tugas otomatis (kompleksitas × urgensi × estimasi jam)",
+        "Auto-assign PIC & backup berbasis sisa kapasitas dan skill yang dibutuhkan",
+        "Eskalasi & handover otomatis saat PIC overload (> 90%) atau cuti/sakit",
+        "Capacity planning: kalender utilisasi jam kerja per minggu/bulan, memperhitungkan cuti, libur, dan tugas rutin",
+        "Workload Fairness Index — Indeks Jain (0–100) dan koefisien Gini dari utilisasi relatif",
+        "What-if simulator: uji skenario cuti, tugas baru, atau tenggat dimajukan, bandingkan sebelum vs. sesudah",
+        "Log aktivitas tidak bisa diedit (audit trail) dan laporan kinerja yang bisa diekspor ke CSV",
+        "Keamanan & hak akses Team Lead / anggota ditegakkan di database (Row Level Security)",
+      ],
+      results: [
+        { value: "9", label: "modul fitur utama" },
+        { value: "Jain & Gini", label: "metrik keadilan beban kerja" },
+        { value: "Real-time", label: "sinkronisasi data antar anggota" },
+      ],
+      gallery: [
+        { src: "assets/img/projects/teamsync/dashboard.jpg", caption: "Dashboard kapasitas & eskalasi otomatis (data contoh)" },
+        { src: "assets/img/projects/teamsync/tugas.jpg", caption: "Papan tugas terbuka dengan bobot poin, PIC, dan backup" },
+        { src: "assets/img/projects/teamsync/kalender.jpg", caption: "Kalender kapasitas — utilisasi jam kerja per minggu" },
+        { src: "assets/img/projects/teamsync/simulasi.jpg", caption: "Simulasi what-if — indeks keadilan sebelum vs. sesudah redistribusi" },
+      ],
+    },
     {
       id: "vms-monitoring-dashboard",
       title: "Monitoring Dashboard Kapal Perikanan (VMS)",
